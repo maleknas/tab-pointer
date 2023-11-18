@@ -1,0 +1,40 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+    void main () {
+      //saisir les tailles des  deux tableaux :
+        int t1;
+        printf("donner la taille de tab1 : ");
+        scanf("%d",&t1);
+        int t2;
+        printf("donner la taille de tab2 : ");
+        scanf("%d",&t2);
+        //declaration des deux tableaux :
+        int* tab1;
+        tab1=(int*) malloc(t1*sizeof(int));
+        if(tab1==NULL){ printf("error 404 ");
+            return 0;}
+        int* tab2;
+        tab1=(int*) malloc(t2*sizeof(int));
+        if(tab2==NULL){ printf("error 404 ");
+            return 0;}
+        if(tab1!=NULL){ free(tab1);}
+        if(tab2!=NULL){ free(tab2);}
+       //remplissage des deux tableux :
+        for (int i = 0; i < t1; ++i) {
+            printf("donner la case n°%d de tab1 : ",i+1);
+            scanf("%d",&tab1[i]);
+        }
+        for (int i = 0; i < t2; ++i) {
+            printf("donner la case n°%d de tab2 : ",i+1);
+            scanf("%d",&tab2[i]);
+        }
+        //affichage des deux tableaux :
+        for (int i = 0; i < t1; ++i) {
+            printf("donner la case n°%d de tab1 : %d",i+1,tab1[i]);
+        }
+        for (int i = 0; i < t1; ++i) {
+            printf("donner la case n°%d de tab2 : %d",i+1,tab2[i]);
+        }
+    }
